@@ -41,6 +41,8 @@
 
 /* Begin PBXFileReference section */
 		37BBAF2584997736BE38AFE1 /* Pods_WeatherAlarmTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WeatherAlarmTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		4003D2531F08541D004A7C30 /* WeatherAlarm.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = WeatherAlarm.entitlements; sourceTree = "<group>"; };
+		4003D2541F08548B004A7C30 /* WeatherAlarm-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "WeatherAlarm-Bridging-Header.h"; sourceTree = SOURCE_ROOT; };
 		400532851F07BAAF009D4E80 /* WeatherAlarm.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WeatherAlarm.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		400532881F07BAB0009D4E80 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4005328A1F07BAB0009D4E80 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -118,6 +120,8 @@
 		400532871F07BAAF009D4E80 /* WeatherAlarm */ = {
 			isa = PBXGroup;
 			children = (
+				4003D2541F08548B004A7C30 /* WeatherAlarm-Bridging-Header.h */,
+				4003D2531F08541D004A7C30 /* WeatherAlarm.entitlements */,
 				400532881F07BAB0009D4E80 /* AppDelegate.swift */,
 				40F5535B1F0847A0005B33C4 /* GoogleService-Info.plist */,
 				4005328A1F07BAB0009D4E80 /* ViewController.swift */,
@@ -247,7 +251,14 @@
 				TargetAttributes = {
 					400532841F07BAAF009D4E80 = {
 						CreatedOnToolsVersion = 8.3.3;
+						DevelopmentTeam = GR8UFT7ETW;
+						LastSwiftMigration = 0830;
 						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.Keychain = {
+								enabled = 1;
+							};
+						};
 					};
 					400532981F07BAB0009D4E80 = {
 						CreatedOnToolsVersion = 8.3.3;
@@ -608,10 +619,15 @@
 			baseConfigurationReference = FE70D9E12BF69E1503A1CBD8 /* Pods-WeatherAlarm.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_ENTITLEMENTS = WeatherAlarm/WeatherAlarm.entitlements;
+				DEVELOPMENT_TEAM = GR8UFT7ETW;
 				INFOPLIST_FILE = WeatherAlarm/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.Schleicher.WeatherAlarm;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "WeatherAlarm-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
@@ -621,10 +637,14 @@
 			baseConfigurationReference = ECCFB20936FD75E37CB72274 /* Pods-WeatherAlarm.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_ENTITLEMENTS = WeatherAlarm/WeatherAlarm.entitlements;
+				DEVELOPMENT_TEAM = GR8UFT7ETW;
 				INFOPLIST_FILE = WeatherAlarm/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.Schleicher.WeatherAlarm;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "WeatherAlarm-Bridging-Header.h";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
