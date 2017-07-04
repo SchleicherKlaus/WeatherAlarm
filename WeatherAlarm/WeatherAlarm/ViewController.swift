@@ -19,8 +19,6 @@ class ViewController: UIViewController, GIDSignInUIDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        GIDSignIn.sharedInstance().uiDelegate = self
-        GIDSignIn.sharedInstance().signIn()
     }
 
     override func didReceiveMemoryWarning() {
@@ -32,18 +30,21 @@ class ViewController: UIViewController, GIDSignInUIDelegate {
         
         let username: String? = txtUsername.text
         let password: String? = txtPassword.text
-        if  username == nil{
+        //check for username and password
+        if  username == ""{
             print("Please enter a username!")
             return
         }
-        if password == nil  {
+        if password == ""  {
             print("Please enter your password")
             return
         }
-        
-        
-        
     }
 
+    @IBAction func btnGoogleLoginPressed(_ sender: Any) {
+        GIDSignIn.sharedInstance().uiDelegate = self
+        GIDSignIn.sharedInstance().signIn()
+        
+    }
 }
 
