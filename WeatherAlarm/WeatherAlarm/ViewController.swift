@@ -13,6 +13,8 @@ import GoogleSignIn
 class ViewController: UIViewController, GIDSignInUIDelegate {
 
     @IBOutlet weak var signInButton: GIDSignInButton!
+    @IBOutlet weak var txtUsername: UITextField!
+    @IBOutlet weak var txtPassword: UITextField!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -26,6 +28,22 @@ class ViewController: UIViewController, GIDSignInUIDelegate {
         // Dispose of any resources that can be recreated.
     }
 
+    @IBAction func btnLoginPressed(_ sender: Any) {
+        
+        let username: String? = txtUsername.text
+        let password: String? = txtPassword.text
+        if  username == nil{
+            print("Please enter a username!")
+            return
+        }
+        if password == nil  {
+            print("Please enter your password")
+            return
+        }
+        
+        
+        
+    }
 
 }
 

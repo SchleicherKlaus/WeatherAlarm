@@ -22,25 +22,57 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="wC7-tM-RjQ" customClass="GIDSignInButton">
-                                <rect key="frame" x="109" y="28" width="157" height="32"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                            </view>
+                            <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" axis="vertical" alignment="center" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="vg6-LT-pi8">
+                                <rect key="frame" x="16" y="231" width="343" height="176"/>
+                                <subviews>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Username or Email" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="2GW-FG-YNq">
+                                        <rect key="frame" x="0.0" y="0.0" width="343" height="30"/>
+                                        <nil key="textColor"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Password" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="pvJ-9z-vbc">
+                                        <rect key="frame" x="0.0" y="42" width="343" height="30"/>
+                                        <nil key="textColor"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
+                                    </textField>
+                                    <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iWN-U2-juT">
+                                        <rect key="frame" x="152.5" y="84" width="38" height="30"/>
+                                        <state key="normal" title="Login"/>
+                                        <connections>
+                                            <action selector="btnLoginPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="e1O-AR-Dod"/>
+                                        </connections>
+                                    </button>
+                                    <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="wC7-tM-RjQ" customClass="GIDSignInButton">
+                                        <rect key="frame" x="93" y="126" width="157" height="50"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    </view>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="2GW-FG-YNq" secondAttribute="trailing" id="O4Q-0X-XBg"/>
+                                    <constraint firstAttribute="trailing" secondItem="pvJ-9z-vbc" secondAttribute="trailing" id="USs-4Z-ECd"/>
+                                    <constraint firstItem="pvJ-9z-vbc" firstAttribute="leading" secondItem="vg6-LT-pi8" secondAttribute="leading" id="thc-I9-Odo"/>
+                                    <constraint firstItem="2GW-FG-YNq" firstAttribute="leading" secondItem="vg6-LT-pi8" secondAttribute="leading" id="tua-Jj-T9h"/>
+                                </constraints>
+                            </stackView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="wC7-tM-RjQ" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="25" id="ATu-fy-Mec"/>
-                            <constraint firstItem="wC7-tM-RjQ" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="93" id="mcJ-CB-lOY"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="wC7-tM-RjQ" secondAttribute="trailing" constant="93" id="tg1-eM-IkE"/>
+                            <constraint firstItem="vg6-LT-pi8" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="641-lq-bHX"/>
+                            <constraint firstItem="vg6-LT-pi8" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="Ve0-nk-oad"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="vg6-LT-pi8" secondAttribute="trailing" id="bug-TE-lDv"/>
                         </constraints>
                     </view>
                     <connections>
                         <outlet property="signInButton" destination="wC7-tM-RjQ" id="p14-rk-0x8"/>
+                        <outlet property="txtPassword" destination="pvJ-9z-vbc" id="Iv0-3G-GTp"/>
+                        <outlet property="txtUsername" destination="2GW-FG-YNq" id="waJ-2f-fle"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="136.80000000000001" y="138.98050974512745"/>
+            <point key="canvasLocation" x="47.200000000000003" y="129.98500749625188"/>
         </scene>
     </scenes>
 </document>
