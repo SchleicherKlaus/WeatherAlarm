@@ -18,6 +18,7 @@ class ViewController: UIViewController, GIDSignInUIDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+
         
     }
 
@@ -39,6 +40,13 @@ class ViewController: UIViewController, GIDSignInUIDelegate {
             print("Please enter your password")
             return
         }
+        
+        //TODO: Auth against Google Firebase email authentication
+        
+        let planningsVC = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "PlanningsVC")
+        self.present(planningsVC, animated: true, completion: nil)
+        
+        
     }
 
     @IBAction func btnGoogleLoginPressed(_ sender: Any) {
