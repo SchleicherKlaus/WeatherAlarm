@@ -100,7 +100,7 @@
         <!--Plannings-->
         <scene sceneID="Z3g-KG-q3U">
             <objects>
-                <viewController storyboardIdentifier="PlanningsVC" title="Plannings" id="ZoY-jy-siw" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="PlanningsVC" title="Plannings" id="ZoY-jy-siw" customClass="PlanningViewController" customModule="WeatherAlarm" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="3i6-TH-aMd"/>
                         <viewControllerLayoutGuide type="bottom" id="V79-Ha-gaf"/>
@@ -131,7 +131,7 @@
                                 <rect key="frame" x="16" y="64" width="343" height="603"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" rowHeight="114" id="SId-At-Zeb">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="planningCell" rowHeight="114" id="SId-At-Zeb" customClass="PlanningCell" customModule="WeatherAlarm" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="343" height="114"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="SId-At-Zeb" id="ggH-fY-NdQ">
@@ -178,8 +178,18 @@
                                                 <constraint firstAttribute="trailingMargin" secondItem="HXD-VS-UpJ" secondAttribute="trailing" constant="8" id="uV6-Ku-Ljr"/>
                                             </constraints>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="dateOfShooting" destination="wid-nd-aHP" id="Zav-C6-El9"/>
+                                            <outlet property="imgView" destination="Dpb-N9-Ojy" id="mU4-0j-B6N"/>
+                                            <outlet property="kindOfShooting" destination="HXD-VS-UpJ" id="Oz5-GD-mac"/>
+                                            <outlet property="loacationName" destination="FH2-Z7-2GC" id="SlZ-Xj-5Ta"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="ZoY-jy-siw" id="oMP-uJ-MHy"/>
+                                    <outlet property="delegate" destination="ZoY-jy-siw" id="Tbj-Rj-65p"/>
+                                </connections>
                             </tableView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -200,6 +210,9 @@
                             <constraint firstItem="V79-Ha-gaf" firstAttribute="top" secondItem="yAC-x6-efZ" secondAttribute="bottom" id="zQt-oD-Yge"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="tableView" destination="yAC-x6-efZ" id="sOX-Kf-I5Q"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Sqj-1z-22a" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

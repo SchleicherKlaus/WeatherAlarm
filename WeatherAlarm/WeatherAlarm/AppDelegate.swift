@@ -73,8 +73,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate, GIDSignInDelegate {
             else {
                 print("User signed into Firebase")
             }
-            let planningsVC = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "PlanningsVC")
-            self.present(planningsVC, animated: true, completion: nil)
 
         }
 
