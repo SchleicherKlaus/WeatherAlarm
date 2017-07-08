@@ -7,12 +7,13 @@
 //
 
 import UIKit
-
+import Firebase
 
 class PlanningViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
 
     @IBOutlet weak var tableView: UITableView!
     
+    let rootRef = Database.database().reference()
     
     
     
@@ -25,8 +26,6 @@ class PlanningViewController: UIViewController, UITableViewDelegate, UITableView
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "planningCell", for: indexPath) as! PlanningCell
-        cell.dateOfShooting.text = "14.01.1971"
-        cell.loacationName.text = "Weitsee"
         return cell
     }
 
