@@ -14,6 +14,7 @@
 		400532931F07BAB0009D4E80 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 400532911F07BAB0009D4E80 /* LaunchScreen.storyboard */; };
 		4005329E1F07BAB0009D4E80 /* WeatherAlarmTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4005329D1F07BAB0009D4E80 /* WeatherAlarmTests.swift */; };
 		400532A91F07BAB0009D4E80 /* WeatherAlarmUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 400532A81F07BAB0009D4E80 /* WeatherAlarmUITests.swift */; };
+		4022AD7A1F12CE5A00F0D020 /* SignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4022AD791F12CE5A00F0D020 /* SignInViewController.swift */; };
 		407754001F11655200598576 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 400532881F07BAB0009D4E80 /* AppDelegate.swift */; };
 		407754011F11655200598576 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 400532881F07BAB0009D4E80 /* AppDelegate.swift */; };
 		407754021F11655900598576 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4005328A1F07BAB0009D4E80 /* ViewController.swift */; };
@@ -78,6 +79,7 @@
 		400532A41F07BAB0009D4E80 /* WeatherAlarmUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WeatherAlarmUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		400532A81F07BAB0009D4E80 /* WeatherAlarmUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherAlarmUITests.swift; sourceTree = "<group>"; };
 		400532AA1F07BAB0009D4E80 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4022AD791F12CE5A00F0D020 /* SignInViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignInViewController.swift; sourceTree = "<group>"; };
 		4099E7CA1F11598300DBE26E /* PlanningCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlanningCell.swift; sourceTree = "<group>"; };
 		4099E7CE1F115B5F00DBE26E /* PlanningViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlanningViewController.swift; sourceTree = "<group>"; };
 		4099E7D21F115C9700DBE26E /* Planning.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Planning.swift; sourceTree = "<group>"; };
@@ -157,6 +159,7 @@
 				400532911F07BAB0009D4E80 /* LaunchScreen.storyboard */,
 				400532941F07BAB0009D4E80 /* Info.plist */,
 				4099E7D21F115C9700DBE26E /* Planning.swift */,
+				4022AD791F12CE5A00F0D020 /* SignInViewController.swift */,
 			);
 			path = WeatherAlarm;
 			sourceTree = "<group>";
@@ -417,7 +420,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
 		861AAFDE8D735B7557B3CEF0 /* [CP] Embed Pods Frameworks */ = {
@@ -477,7 +480,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
 		FE927CB77F77D304078DDC87 /* [CP] Check Pods Manifest.lock */ = {
@@ -492,7 +495,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -504,6 +507,7 @@
 			files = (
 				4099E7D31F115C9700DBE26E /* Planning.swift in Sources */,
 				4099E7CB1F11598300DBE26E /* PlanningCell.swift in Sources */,
+				4022AD7A1F12CE5A00F0D020 /* SignInViewController.swift in Sources */,
 				4099E7CF1F115B5F00DBE26E /* PlanningViewController.swift in Sources */,
 				4005328B1F07BAB0009D4E80 /* ViewController.swift in Sources */,
 				400532891F07BAB0009D4E80 /* AppDelegate.swift in Sources */,
