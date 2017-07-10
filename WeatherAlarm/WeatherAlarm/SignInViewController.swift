@@ -17,10 +17,14 @@ class SignInViewController: UIViewController {
     @IBOutlet weak var passwordField: UITextField!
     @IBOutlet weak var confirmPwField: UITextField!
     @IBOutlet weak var emailField: UITextField!
+    
+    var ref: DatabaseReference!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         // Do any additional setup after loading the view.
+        ref = Database.database().reference()
     }
 
     @IBAction func signInPressed(_ sender: Any) {
@@ -39,8 +43,17 @@ class SignInViewController: UIViewController {
                 }
                 
                 if let user = user {
-                    let vc = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "PlanningsVC")
+                    
+                    
+                    let userInfo: [String : Any] = ["uid" : user.uid,
+                                                                 "full name" : self.nameField.text!,
+                                                                 "email" : self.emailField.text!]
+                    self.ref.child("users").child(user.uid).setValue(userInfo)
+                    
+                    
+                    let vc = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "usersDetailVC")
                     self.present(vc, animated: true, completion: nil)
+                    
                 }
             })
             

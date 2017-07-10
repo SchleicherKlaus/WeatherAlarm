@@ -37,6 +37,9 @@
 		4099E7D31F115C9700DBE26E /* Planning.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4099E7D21F115C9700DBE26E /* Planning.swift */; };
 		4099E7D41F115C9700DBE26E /* Planning.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4099E7D21F115C9700DBE26E /* Planning.swift */; };
 		4099E7D51F115C9700DBE26E /* Planning.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4099E7D21F115C9700DBE26E /* Planning.swift */; };
+		40ADFB0D1F140A650017A925 /* userDataViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40ADFB0C1F140A650017A925 /* userDataViewController.swift */; };
+		40ADFB0E1F140A650017A925 /* userDataViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40ADFB0C1F140A650017A925 /* userDataViewController.swift */; };
+		40ADFB0F1F140A650017A925 /* userDataViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40ADFB0C1F140A650017A925 /* userDataViewController.swift */; };
 		40F5535C1F0847A0005B33C4 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 40F5535B1F0847A0005B33C4 /* GoogleService-Info.plist */; };
 		40F5535D1F0847A0005B33C4 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 40F5535B1F0847A0005B33C4 /* GoogleService-Info.plist */; };
 		40F5535E1F0847A0005B33C4 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 40F5535B1F0847A0005B33C4 /* GoogleService-Info.plist */; };
@@ -83,6 +86,7 @@
 		4099E7CA1F11598300DBE26E /* PlanningCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlanningCell.swift; sourceTree = "<group>"; };
 		4099E7CE1F115B5F00DBE26E /* PlanningViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlanningViewController.swift; sourceTree = "<group>"; };
 		4099E7D21F115C9700DBE26E /* Planning.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Planning.swift; sourceTree = "<group>"; };
+		40ADFB0C1F140A650017A925 /* userDataViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = userDataViewController.swift; sourceTree = "<group>"; };
 		40F5535B1F0847A0005B33C4 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		44301D76E38F00D60445119F /* Pods-WeatherAlarmUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WeatherAlarmUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-WeatherAlarmUITests/Pods-WeatherAlarmUITests.release.xcconfig"; sourceTree = "<group>"; };
 		4B84837C31016D34DDA98F53 /* Pods-WeatherAlarmTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WeatherAlarmTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-WeatherAlarmTests/Pods-WeatherAlarmTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -160,6 +164,7 @@
 				400532941F07BAB0009D4E80 /* Info.plist */,
 				4099E7D21F115C9700DBE26E /* Planning.swift */,
 				4022AD791F12CE5A00F0D020 /* SignInViewController.swift */,
+				40ADFB0C1F140A650017A925 /* userDataViewController.swift */,
 			);
 			path = WeatherAlarm;
 			sourceTree = "<group>";
@@ -507,6 +512,7 @@
 			files = (
 				4099E7D31F115C9700DBE26E /* Planning.swift in Sources */,
 				4099E7CB1F11598300DBE26E /* PlanningCell.swift in Sources */,
+				40ADFB0D1F140A650017A925 /* userDataViewController.swift in Sources */,
 				4022AD7A1F12CE5A00F0D020 /* SignInViewController.swift in Sources */,
 				4099E7CF1F115B5F00DBE26E /* PlanningViewController.swift in Sources */,
 				4005328B1F07BAB0009D4E80 /* ViewController.swift in Sources */,
@@ -520,6 +526,7 @@
 			files = (
 				407754021F11655900598576 /* ViewController.swift in Sources */,
 				407754001F11655200598576 /* AppDelegate.swift in Sources */,
+				40ADFB0E1F140A650017A925 /* userDataViewController.swift in Sources */,
 				407754041F11655E00598576 /* PlanningCell.swift in Sources */,
 				4099E7D41F115C9700DBE26E /* Planning.swift in Sources */,
 				4005329E1F07BAB0009D4E80 /* WeatherAlarmTests.swift in Sources */,
@@ -533,6 +540,7 @@
 			files = (
 				407754031F11655900598576 /* ViewController.swift in Sources */,
 				407754011F11655200598576 /* AppDelegate.swift in Sources */,
+				40ADFB0F1F140A650017A925 /* userDataViewController.swift in Sources */,
 				407754051F11655E00598576 /* PlanningCell.swift in Sources */,
 				4099E7D51F115C9700DBE26E /* Planning.swift in Sources */,
 				400532A91F07BAB0009D4E80 /* WeatherAlarmUITests.swift in Sources */,
